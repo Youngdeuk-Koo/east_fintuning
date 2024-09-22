@@ -1,0 +1,14 @@
+db:
+  host: "34.64.255.147"
+  port: "5432"
+  username: "gravylab"
+  password: "glab0110!!"
+  database: "ai-resume"
+  pool_size: 5
+  max_overflow: 15
+  pool_timeout: 30
+  pool_recycle: 600
+
+cors_origins:
+  - "*"
+

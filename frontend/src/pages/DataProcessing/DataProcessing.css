@@ -1,0 +1,128 @@
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes shake-intense {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(-10px); }
+    20% { transform: translateX(10px); }
+    30% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    50% { transform: translateX(-10px); }
+    60% { transform: translateX(10px); }
+    70% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    90% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes revert-color {
+    0% { background-color: red; color: white; }
+    100% { background-color: initial; color: initial; }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+/* 데이터셋 만들기 버튼에 에러 발생 시 흔들림 효과 추가 */
+.create-dataset-error {
+    animation: shake-intense 0.5s, revert-color 0.5s 0.5s;
+    background-color: red !important;
+    color: white !important;
+}
+
+/* 기존 CSS 코드 */
+.custom-table .ant-table-thead > tr > th.custom-column-header-0 {
+    background-color: #1890ff !important; /* 파란색 */
+    color: white !important;
+    text-align: center;
+    font-size: 18px !important;
+}
+
+.custom-table .ant-table-thead > tr > th.custom-column-header-1 {
+    background-color: #40a9ff !important; /* 밝은 파란색 */
+    color: white !important;
+    text-align: center;
+    font-size: 18px !important;
+}
+
+.custom-table .ant-table-thead > tr > th.custom-column-header-2 {
+    background-color: #69c0ff !important; /* 더 밝은 파란색 */
+    color: white !important;
+    text-align: center;
+    font-size: 18px !important;
+}
+
+.custom-table .ant-table-thead > tr > th.custom-column-header-3 {
+    background-color: #91d5ff !important; /* 아주 밝은 파란색 */
+    color: white !important;
+    text-align: center;
+    font-size: 18px !important;
+}
+
+.custom-table .ant-table-thead > tr > th.custom-column-header-4 {
+    background-color: #bae7ff !important; /* 매우 밝은 파란색 */
+    color: white !important;
+    text-align: center;
+    font-size: 18px !important;
+}
+
+.custom-column-header-0 {
+    background-color: #f0f8ff;
+}
+
+.custom-column-header-1 {
+    background-color: #faebd7;
+}
+
+.custom-column-header-2 {
+    background-color: #7fffd4;
+}
+
+.custom-column-header-3 {
+    background-color: #f5f5dc;
+}
+
+.custom-column-header-4 {
+    background-color: #ffe4c4;
+}
+
+.custom-table {
+    margin-top: 20px;
+}
+
+.columns-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column-item {
+    flex: 1 1 calc(33.333% - 10px); /* 3개까지 보이도록 설정 */
+    margin: 5px;
+    box-sizing: border-box;
+    min-width: calc(33.333% - 10px); /* 최소 너비 설정 */
+    max-width: calc(33.333% - 10px); /* 최대 너비 설정 */
+    overflow: hidden; /* 박스를 넘지 않도록 설정 */
+}
+
+@media (max-width: 1200px) {
+    .column-item {
+        flex: 1 1 calc(33.333% - 10px); /* 화면이 작아져도 3개까지 보이도록 설정 */
+        min-width: calc(33.333% - 10px); /* 최소 너비 설정 */
+        max-width: calc(33.333% - 10px); /* 최대 너비 설정 */
+    }
+}
+
+@media (max-width: 768px) {
+    .column-item {
+        flex: 1 1 calc(33.333% - 10px); /* 화면이 더 작아져도 3개까지 보이도록 설정 */
+        min-width: calc(33.333% - 10px); /* 최소 너비 설정 */
+        max-width: calc(33.333% - 10px); /* 최대 너비 설정 */
+    }
+}
